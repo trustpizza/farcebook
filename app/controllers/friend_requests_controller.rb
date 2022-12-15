@@ -18,7 +18,7 @@ class FriendRequestsController < ApplicationController
     @friend_request = FriendRequest.find_by(friend_request_params)
     return unless @friend_request.destroy
 
-    #needs redirect
+    redirect_to root_url
   end
 
   private
