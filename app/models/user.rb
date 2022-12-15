@@ -18,7 +18,7 @@ class User < ApplicationRecord
   has_many :began_friends, through: :began_friendships, source: :friend, dependent: :destroy
   has_many :accepted_friends, through: :accepted_friendships, source: :user, dependent: :destroy
 
-
+  has_many :posts
 
   def friends
     accepted_friends + began_friends
