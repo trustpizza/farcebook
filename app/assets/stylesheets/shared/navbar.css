@@ -1,5 +1,12 @@
+
 .navbar {
   border: 1px solid black;
+  background-color: rgb(66, 103, 178);
   height: 80px;
+  color: white;
+  display: flex;
+}
 
+.logout {
+  align-items: flex-end;
 }
