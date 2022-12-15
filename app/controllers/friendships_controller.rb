@@ -3,6 +3,7 @@ class FriendshipsController < ApplicationController
     @friendships = Friendship.all
     @user = User.find(params[:user_id])
   end
+  
 
   def new
     @friendship = Friendship.new
@@ -12,8 +13,10 @@ class FriendshipsController < ApplicationController
     @friendship = current_user.accepted_friendships.build(friendship_params)
     return unless @friendship.save
 
+    FriendRequestDestroyer.call(friendship_params)
+
     # Destroy friend_request
-    redirect_to root_url
+    redirect_to request.referrer
   end
 
   def destroy
@@ -24,7 +27,7 @@ class FriendshipsController < ApplicationController
 
     return unless @friendship.destroy
 
-    redirect_to root_url
+    redirect_to request.refferer  
   end
   private
 
