@@ -1,0 +1,5 @@
+<%= current_user.first_name %>
+<%= params %>
+<%= current_user.id %>
+
+<%= button_to "Logout", destroy_user_session_path, :method => :delete, data: { turbo: false } %>
