@@ -1,0 +1,15 @@
+<% current_user.received_friend_requests.each do |req| %>
+  <div>
+    <%= link_to 'Friend Request', user_path(req.sender)%>
+  </div>
+
+  <div>
+    <%= button_to 'Accept',
+        user_friendships_path(current_user.id),
+        params: { friendship: { user_id: req.sender_id,
+                                friend_id: current_user.id
+                                } 
+                }
+    %>
+  </div>
+<% end %>
