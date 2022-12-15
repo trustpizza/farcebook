@@ -11,7 +11,7 @@ class FriendRequestsController < ApplicationController
     @friend_request = current_user.sent_friend_requests.build(friend_request_params)
     return unless @friend_request.save
     
-    #needs redirect
+    redirect_to root_url
   end
 
   def destroy
