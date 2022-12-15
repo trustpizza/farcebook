@@ -11,14 +11,14 @@ class FriendRequestsController < ApplicationController
     @friend_request = current_user.sent_friend_requests.build(friend_request_params)
     return unless @friend_request.save
     
-    redirect_to root_url
+    redirect_to request.referrer
   end
 
   def destroy
     @friend_request = FriendRequest.find_by(friend_request_params)
     return unless @friend_request.destroy
 
-    redirect_to root_url
+    redirect_to request.referrer
   end
 
   private

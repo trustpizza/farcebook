@@ -14,8 +14,8 @@
   </div>
 
   <div>
-    <%= button_to 'Deny',
-        user_friend_requests_path(current_user.id, req.sender.id),
+    <%= button_to 'Decline',
+        user_friend_request_path(current_user.id, req.sender.id),
         method: :delete,
         params: { friend_request: { sender_id: req.sender.id,
                                     receiver_id: current_user.id }
