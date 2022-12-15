@@ -22,7 +22,8 @@
                 }
     %>
   </div>
-  <%= FriendRequest.find_by(sender_id: req.sender.id, receiver_id: current_user.id) %>
 
 <% end %>
+
+<%= params %>
 

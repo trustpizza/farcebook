@@ -12,8 +12,7 @@ class FriendshipsController < ApplicationController
   def create
     @friendship = current_user.accepted_friendships.build(friendship_params)
     return unless @friendship.save
-
-    FriendRequestDestroyer.call(friendship_params)
+    
 
     # Destroy friend_request
     redirect_to request.referrer
