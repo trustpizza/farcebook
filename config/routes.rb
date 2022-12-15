@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :users
+  resources :users do 
+    resources :friend_requests
+  end
   # Defines the root path route ("/")
   # root "articles#index"
   root "users#index" #need to change
