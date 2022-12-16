@@ -1,8 +1,8 @@
-<div> 
-  <div> Hello <%= current_user.first_name %> </div>
-  <div> </div>
-  <div></div>
-  <div></div>
-  <%= button_to "Logout", destroy_user_session_path, :method => :delete, data: { turbo: false }, class: "logout"  %>
-</div>
+  <div class="navbar">
+      <div> Hello <%= current_user.first_name %> </div>
+      <div> </div>
+      <div></div>
+      <div></div>
+      <%= button_to "Logout", destroy_user_session_path, :method => :delete, data: { turbo: false }, class: "logout"  %>
+  </div>
 

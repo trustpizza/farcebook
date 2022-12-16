@@ -1,5 +1,9 @@
-<% @posts.each do |post| %>
-  <%= post.title %> <br>
-  <%= post.author.first_name %> <%= post.author.last_name %> <br>
-  <%= post.body %>
-<% end %>
+<%= render 'shared/navbar'  %>
+<div>
+  <% @posts.each do |post| %>
+    <%= post.title %> <br>
+    <%= post.author.first_name %> <%= post.author.last_name %> <br>
+    <%= post.body %>
+  <% end %>
+</div>
+

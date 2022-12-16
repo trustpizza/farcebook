@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users do 
     resources :friend_requests
     resources :friendships 
-    resources :posts
+    resources :posts, only: [:index, :new, :create]
   end
 
   resources :posts, only: [:show, :edit, :update, :destroy] do 
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   end
   # Defines the root path route ("/")
   # root "articles#index"
-  root "users#index" #need to change
+  root "posts#index" #need to change
 end
