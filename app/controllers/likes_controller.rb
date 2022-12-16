@@ -9,7 +9,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @post = Pst.find(params[:posts_id])
+    @post = Post.find(params[:posts_id])
     @like = @post.likes.find_by(like_params)
     @like.destroy
   end
