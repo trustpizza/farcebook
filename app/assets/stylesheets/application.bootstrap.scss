@@ -1,6 +1,3 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
-
-.navbar {
-  background-color: rgb(66, 103, 178);
-}
+@import 'shared/navbar.css'
