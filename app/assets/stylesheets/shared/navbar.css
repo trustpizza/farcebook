@@ -1,12 +1,28 @@
 
 .navbar {
-  border: 1px solid black;
   background-color: rgb(66, 103, 178);
-  height: 80px;
-  color: white;
-  display: flex;
+}
+.navbar.navbar-expand-lg {
 }
 
-.logout {
-  align-items: flex-end;
+.navbar.navbar-expand-lg.navbar-light {
 }
+
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+}
+
+.container-fluid {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.container-fluid.btn {
+  background-color: white;
+}
+
