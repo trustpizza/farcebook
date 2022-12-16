@@ -8,6 +8,11 @@ Rails.application.routes.draw do
     resources :friendships 
     resources :posts
   end
+
+  resources :posts, only: [:show, :edit, :update, :destroy] do 
+    resources :comments
+    resources :likes
+  end
   # Defines the root path route ("/")
   # root "articles#index"
   root "users#index" #need to change
