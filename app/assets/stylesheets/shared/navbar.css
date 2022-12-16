@@ -1,6 +1,6 @@
 
 .navbar {
-  background-color: rgb(66, 103, 178);
+  background-color: rgb(66, 103, 178) !important;
 }
 .navbar.navbar-expand-lg {
 }
