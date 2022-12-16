@@ -8,7 +8,10 @@
         user_friendships_path(current_user.id),
         params: { friendship: { user_id: req.sender_id,
                                 friend_id: current_user.id
-                                } 
+                                },
+                  friend_request: { sender_id: req.sender_id, 
+                                    receiver_id: current_user.id
+                                  }
                 }
     %>
   </div>
