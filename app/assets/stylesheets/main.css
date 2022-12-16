@@ -1,1 +1,8 @@
-@import url()
+@font-face {
+  font-family: 'Klavika';
+  src: url('klavika-light.otf')
+}
+
+* {
+  font-family: 'Klavika';
+}
